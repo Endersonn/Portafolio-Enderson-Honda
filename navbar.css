@@ -6,15 +6,18 @@
     box-sizing: border-box; 
 }
 
-/* Estilos para la barra de navegación */
+
 .navbar {
+    position: sticky; /* Estilo para la barra de navegación sticky */
+    top: 0; /* Mantiene la navbar pegada en la parte superior */
     background-color: #5e5c5c;
     display: flex;
-    justify-content: space-between; /* Separar los bloques de logo y enlaces */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100px; 
-    padding: 0 20px; 
+    height: 100px;
+    padding: 0 20px;
+    z-index: 1000; /* Asegura que la navbar quede por encima de otros elementos */
 }
 
 /* Estilos para el contenedor del logo */
