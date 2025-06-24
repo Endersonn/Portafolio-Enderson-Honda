@@ -67,22 +67,48 @@
     </div>
 </div>
 
+
 <!-- Sección de comentarios -->
 <div class="comentarios" id="comments">
-    <h3>Deja tu Comentario</h3>
-    <form action="#" method="post">
-        <label for="nombre-apellido">Nombre y Apellido:</label>
-        <input type="text" id="nombre-apellido" name="nombre-apellido" required>
+    <h3 class="comentarios-titulo">Deja tu Comentario</h3>
+    <form class="comentarios-form" action="guardar_comentario.php" method="POST">
+        <label class="comentarios-label" for="nombreyapellido">Nombre y Apellido:</label>
+        <input class="comentarios-input" type="text" id="nombreyapellido" name="nombreyapellido" required>
+        
+        <label class="comentarios-label" for="email">Correo electrónico:</label>
+        <input class="comentarios-input" type="email" id="email" name="email" required>
 
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required>
+        <label class="comentarios-label" for="nota">Comentario:</label>
+        <textarea class="comentarios-textarea" id="nota" name="nota" required></textarea>
 
-        <label for="comentario">Comentario:</label>
-        <textarea id="comentario" name="comentario" rows="5" required></textarea>
-
-        <button type="submit">Enviar Comentario</button>
+        <button class="comentarios-button" type="submit">Enviar Comentario</button>
     </form>
 </div>
+
+
+
+
+<?php
+    include('conexionbdd.php');  // Incluye el archivo de conexión
+
+    $sql = "SELECT * FROM comentario ORDER BY fechanota DESC";  // Obtiene los comentarios ordenados por fecha
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Mostrar cada comentario
+        while($row = $result->fetch_assoc()) {
+            echo "<div class='comentario'>";
+            echo "<p><strong>" . $row['nombreyapellido'] . "</strong> (" . $row['fechanota'] . ")</p>";
+            echo "<p>" . $row['nota'] . "</p>";
+            echo "</div>";
+        }
+    } else {
+        echo "";
+    }
+
+    $conn->close();
+?>
+
 
 <!-- Sección de Footer -->
 <footer id="contact">

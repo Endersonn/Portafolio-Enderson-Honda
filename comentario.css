@@ -5,18 +5,18 @@
     text-align: center;
 }
 
-.comentarios h3 {
+.comentarios-titulo {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-.comentarios form {
+.comentarios-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.comentarios label {
+.comentarios-label {
     font-size: 1.2em;
     margin-bottom: 5px;
     text-align: left;
@@ -24,7 +24,7 @@
     max-width: 400px;
 }
 
-.comentarios input, .comentarios textarea {
+.comentarios-input, .comentarios-textarea {
     width: 100%;
     max-width: 400px;
     padding: 10px;
@@ -34,7 +34,7 @@
     font-size: 1em;
 }
 
-.comentarios button {
+.comentarios-button {
     padding: 10px 20px;
     font-size: 1.2em;
     background-color: #5e5c5c;
@@ -44,6 +44,39 @@
     cursor: pointer;
 }
 
-.comentarios button:hover {
+.comentarios-button:hover {
     background-color: #444;
+}
+
+/* Estilo para los comentarios */
+.comentario {
+    background-color: #f4f4f4; 
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    max-width: 800px;  
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: left; 
+}
+
+/* Estilo para el nombre y la fecha */
+.comentario p strong {
+    color: #333;
+    font-size: 1.2em; 
+}
+
+/* Estilo para la fecha */
+.comentario p {
+    font-size: 0.9em;
+    color: #888; 
+    margin-bottom: 10px; 
+}
+
+/* Estilo para el texto del comentario */
+.comentario p {
+    font-size: 1.1em; 
+    color: #555; 
+    line-height: 1.5; 
 }
