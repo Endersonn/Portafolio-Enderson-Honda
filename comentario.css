@@ -1,0 +1,49 @@
+/* Estilos para la sección de comentarios */
+.comentarios {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.comentarios h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.comentarios form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comentarios label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+.comentarios input, .comentarios textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.comentarios button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #5e5c5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comentarios button:hover {
+    background-color: #444;
+}
